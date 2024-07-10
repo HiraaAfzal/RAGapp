@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "sayvai-rag"
+version = "0.0.1"
+description = "Personal or practice project"
+authors = ["Hira Afzal <hiraafzal9978@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^8.2.2"
+black = "^24.4.2"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
