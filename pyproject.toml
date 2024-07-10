@@ -6,10 +6,15 @@ authors = ["Hira Afzal <hiraafzal9978@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.13"
 pytest = "^8.2.2"
 black = "^24.4.2"
 python-dotenv = "^1.0.1"
+langchain = "^0.2.7"
+langchain-pinecone = "^0.1.1"
+langchain-openai = "^0.1.14"
+langchain-community = "^0.2.7"
+fastapi = {extras = ["all"], version = "^0.111.0"}
 
 
 [build-system]
