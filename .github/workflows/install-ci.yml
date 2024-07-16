@@ -29,5 +29,7 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-root
 
-      - name: Pytest
-        run: poetry run pytest --rootdir=/home/runner/work/RAGapp tests/
+      - name: Run tests
+        run: |
+          poetry add pytest
+          poetry run pytest tests/
