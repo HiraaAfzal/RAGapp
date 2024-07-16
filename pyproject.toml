@@ -4,9 +4,6 @@ version = "0.0.1"
 description = "Personal or practice project"
 authors = ["Hira Afzal <hiraafzal9978@gmail.com>"]
 readme = "README.md"
-packages = [
-    { include = "sayvai_rag" }
-]
 
 
 [tool.poetry.dependencies]
@@ -24,3 +21,7 @@ fastapi = {extras = ["all"], version = "^0.111.0"}
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpaths = ["src"]
+
