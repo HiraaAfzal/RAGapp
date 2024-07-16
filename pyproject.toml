@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "sayvai-rag"
+name = "sayvai_rag"
 version = "0.0.1"
 description = "Personal or practice project"
 authors = ["Hira Afzal <hiraafzal9978@gmail.com>"]
