@@ -33,5 +33,4 @@ jobs:
 
       - name: Run tests
         run: |
-          poetry add pytest
-          poetry run pytest tests/
+          poetry run pytest --rootdir=/home/runner/work/RAGapp/ tests/
