@@ -32,5 +32,7 @@ jobs:
         run: poetry install
 
       - name: Run tests
+        env:
+          PYTHONPATH: src
         run: |
-          poetry run pytest --rootdir=/home/runner/work/RAGapp/ tests/
+          poetry run pytest --rootdir=./ tests/
