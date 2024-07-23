@@ -30,11 +30,12 @@ class IndiaTourAssistant:
 
         # Initialize tools
         self.tools = [
-            Tool(
-                name="IndiaKnowledgeBase",
-                func=search_index,
-                description="This tool will help to get information about India tourism",
-            )
+            # Tool(
+            #     name="IndiaKnowledgeBase",
+            #     func=search_index,
+            #     description="This tool will help to get information about India tourism",
+            # )
+            search_index
         ]
 
         # Initialize agent

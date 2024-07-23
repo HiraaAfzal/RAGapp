@@ -3,7 +3,10 @@ services:
   web:
     build:
       context: .
-      dockerfile: ./
+      # dockerfile: ./
+    image: india_tourism:latest      
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - PINECONE_API_KEY=${PINECONE_API_KEY}
+    ports:
+      - "8000:8000"
