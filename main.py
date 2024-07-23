@@ -2,10 +2,10 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 # Assuming `IndiaTourAssistant` is imported correctly
-from sayvai_rag import IndiaTourAssistant
+from sayvai_rag.agent import IndiaTourAssistant
 
 app = FastAPI()
-
+assistant = IndiaTourAssistant()
 
 class QueryModel(BaseModel):
     input_text: str
@@ -14,7 +14,7 @@ class QueryModel(BaseModel):
 @app.post("/chat/")
 def invoke_agent(query: QueryModel):
     try:
-        assistant = IndiaTourAssistant()
+        
         response = assistant.invoke(query.input_text)
         return {"response": response}
     except Exception as e:

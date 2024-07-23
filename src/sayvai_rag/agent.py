@@ -22,6 +22,7 @@ class IndiaTourAssistant:
         self.prompt = ChatPromptTemplate.from_messages(
             [
                 ("system", "You are india tour assistant Hira Afzal"),
+                MessagesPlaceholder(variable_name="chat_history"),
                 ("user", "{input}"),
                 MessagesPlaceholder(variable_name="agent_scratchpad"),
             ]
@@ -45,7 +46,7 @@ class IndiaTourAssistant:
 
         # Initialize agent executor
         self.agent_executor = AgentExecutor(
-            agent=self.agent, tools=self.tools, verbose=True
+            agent=self.agent, tools=self.tools, verbose=True, memory=self.conversational_memory
         )
 
     def invoke(self, user_input):
@@ -55,4 +56,4 @@ class IndiaTourAssistant:
 # Example usage:
 # assistant = IndiaTourAssistant()
 # response = assistant.invoke("hi, who are you?")
-# print(response)
+# print(response) 
